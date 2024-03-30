@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Work+Sans:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-body: #121214;
+  --bg-button: #8257e5;
+  --color-text: #e1e1e6;
+  --color-title: #04d361;
+  --color-form: #a8a8a8;
+  --font-workSans: "Work Sans", sans-serif;
+  --font-leagueSpartan: "League Spartan", sans-serif;
+}
+
+body {
+  display: flex;
+  background: var(--bg-body);
+  font-family: var(--font-leagueSpartan);
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 50px 30px;
+  width: 100%;
+}
+
+.cover {
+  display: none;
+}
+
+.logo {
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
+.logo_image {
+  height: 90px;
+  width: 100%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content_title {
+  color: var(--color-title);
+  font-family: var(--font-workSans);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+.content_subtitle {
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.content_text {
+  color: var(--color-form);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form_label {
+  color: var(--color-form);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.form_item {
+  align-items: center;
+  border-left: 4px solid var(--color-title);
+  display: flex;
+  height: 48px;
+}
+
+.item_input {
+  border-width: 0px;
+  color: var(--color-form);
+  font-family: var(--font-workSans);
+  font-size: 16px;
+  outline: none;
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+}
+
+.item_input::placeholder {
+  color: var(--color-form);
+  font-family: var(--font-workSans);
+  font-size: 14px;
+}
+
+.form_button {
+  align-items: center;
+  cursor: pointer;
+  background: var(--bg-button);
+  border: none;
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+  transition: background 700ms;
+}
+
+.form_button:hover {
+  background: var(--color-title);
+}
+
+.main_link {
+  align-items: center;
+  display: flex;
+  color: var(--bg-button);
+  font-size: 16px;
+  font-weight: 700;
+  gap: 8px;
+  text-decoration: none;
+}
+
+@media (min-width: 540px) {
+  .container {
+    width: 70%;
+  }
+
+  .cover {
+    background: url("./assets/read_news.jpg") no-repeat bottom center/cover;
+    display: block;
+    width: 30%;
+  }
+
+  .content_title {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .content_subtitle {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .content_text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 920px) {
+  .container {
+    display: block;
+    width: 50%;
+  }
+
+  .cover {
+    background: url("./assets/read_news.jpg") no-repeat right top/cover;
+    width: 50%;
+  }
+
+  .logo {
+    text-align: left;
+    width: 100%;
+  }
+
+  .logo_image {
+    height: 90px;
+    width: 390px;
+  }
+
+  .main {
+    margin-top: 90px;
+  }
+
+  .content_title {
+    font-size: 26px;
+  }
+
+  .content_text {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .form_label {
+    font-size: 18px;
+  }
+
+  .form_item {
+    width: 100%;
+  }
+
+  .main_link {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .content_text {
+    font-size: 18px;
+  }
+
+  .form_item {
+    position: relative;
+    width: 800px;
+  }
+}
